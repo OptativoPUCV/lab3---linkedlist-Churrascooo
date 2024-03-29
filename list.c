@@ -47,11 +47,17 @@ void * firstList(List * list)
   return list->current->data;
 }
 
-void * nextList(List * list) {
+void * nextList(List * list)
+{
+  if (list->current->next == NULL)
+  {
+    return list->current->data;
+  }
     return NULL;
 }
 
-void * lastList(List * list) {
+void * lastList(List * list)
+{
     return NULL;
 }
 
