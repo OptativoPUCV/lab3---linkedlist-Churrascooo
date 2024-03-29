@@ -37,8 +37,14 @@ List * createList()
   return nuevo;
 }
 
-void * firstList(List * list) {
+void * firstList(List * list)
+{
+  list->current = list->head;
+  if (list->head == NULL)
+  {
     return NULL;
+  }
+  return list->current->data;
 }
 
 void * nextList(List * list) {
