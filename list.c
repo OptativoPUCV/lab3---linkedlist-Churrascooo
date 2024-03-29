@@ -51,11 +51,11 @@ void * nextList(List * list)
 {
   if (list->current->next == NULL)
   {
-    return NULL;
+    return 0;
   }
   if (list->current == NULL)
   {
-    return NULL;
+    return 0;
   }
   
   list->current = list->current->next;
